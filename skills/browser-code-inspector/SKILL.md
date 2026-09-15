@@ -1,6 +1,12 @@
 ---
 name: browser-code-inspector
-description: Use when setting up or troubleshooting code-inspector-plugin click-to-source in a development browser — Option+Shift or Alt+Shift overlay, Cursor not opening, Cursor opening slowly after click, Vue CLI/Vite plugin registration, or Cannot find module sass/node-sass after installing the plugin. Do not use for ordinary browser automation or inspecting an element from text, selector, or screenshot alone.
+description: >-
+  Use when setting up or troubleshooting code-inspector-plugin click-to-source
+  in a development browser, Option+Shift or Alt+Shift overlay, Cursor not
+  opening, Cursor opening slowly after click, Vue CLI or Vite plugin
+  registration, or Cannot find module sass/node-sass after installing the
+  plugin. Do not use for ordinary browser automation or inspecting an element
+  from text, selector, or screenshot alone.
 metadata:
   short-description: Click a browser element to open its source in Cursor
 ---

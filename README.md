@@ -25,30 +25,38 @@ skills/
 
 ## 安装
 
-默认：装仓库里全部 skill，并写入用户目录，本机所有项目都能用。
+全局安装（本机所有项目可用）：
 
 ```bash
-npx skills add 15257988874/agent-skills --all -g -y
+npx skills add 15257988874/agent-skills -g
 ```
 
-- `--all`：安装全部 skill
-- `-g`：全局安装（跨项目）
-- `-y`：跳过交互确认
+按提示操作即可：
 
-只看有哪些 skill：
+1. 选择要装的 skill（可以全选）。
+2. 选择要装到的 agent。这里 **支持多选**，同时勾选 **Cursor** 和 **Codex**。
+
+只装当前项目、不跨项目时，去掉 `-g`：
+
+```bash
+npx skills add 15257988874/agent-skills
+```
+
+只装某一个 skill：
+
+```bash
+npx skills add 15257988874/agent-skills --skill browser-code-inspector -g
+```
+
+列出仓库里的 skill：
 
 ```bash
 npx skills add 15257988874/agent-skills --list
 ```
 
-只装某一个（仍然建议加 `-g`，否则只对当前项目生效）：
+## 在 Cursor 里怎么用
 
-```bash
-npx skills add 15257988874/agent-skills --skill browser-code-inspector -g -y
-
-# 等价写法
-npx skills add 15257988874/agent-skills@browser-code-inspector -g -y
-```
+装好后重开一次 Cursor。在 Agent 对话里直接说要配置 code-inspector 即可，不必等聊天框 `/` 菜单出现这个 skill。
 
 ## 本地使用
 
