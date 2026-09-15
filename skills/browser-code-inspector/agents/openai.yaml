@@ -1,0 +1,4 @@
+interface:
+  display_name: "Browser Code Inspector"
+  short_description: "Click a browser element to open its source in Cursor"
+  default_prompt: "Configure click-to-source inspection so a browser element opens its local source location in Cursor."
