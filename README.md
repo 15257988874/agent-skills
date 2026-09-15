@@ -25,31 +25,29 @@ skills/
 
 ## 安装
 
-列出仓库里的 skill：
+默认：装仓库里全部 skill，并写入用户目录，本机所有项目都能用。
+
+```bash
+npx skills add 15257988874/agent-skills --all -g -y
+```
+
+- `--all`：安装全部 skill
+- `-g`：全局安装（跨项目）
+- `-y`：跳过交互确认
+
+只看有哪些 skill：
 
 ```bash
 npx skills add 15257988874/agent-skills --list
 ```
 
-只装某一个：
-
-```bash
-npx skills add 15257988874/agent-skills --skill browser-code-inspector
-
-# 等价写法
-npx skills add 15257988874/agent-skills@browser-code-inspector
-```
-
-一次装全部：
-
-```bash
-npx skills add 15257988874/agent-skills --all
-```
-
-全局安装（本机所有项目可用）加上 `-g`。跳过交互加上 `-y`。
+只装某一个（仍然建议加 `-g`，否则只对当前项目生效）：
 
 ```bash
 npx skills add 15257988874/agent-skills --skill browser-code-inspector -g -y
+
+# 等价写法
+npx skills add 15257988874/agent-skills@browser-code-inspector -g -y
 ```
 
 ## 本地使用
