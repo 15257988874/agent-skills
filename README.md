@@ -56,7 +56,19 @@ npx skills add 15257988874/agent-skills --list
 
 ## 在 Cursor 里怎么用
 
-装好后重开一次 Cursor。在 Agent 对话里直接说要配置 code-inspector 即可，不必等聊天框 `/` 菜单出现这个 skill。
+装好后请 **新开一条 Agent 对话**，或执行一次 `Developer: Reload Window`。不要在刚装完的旧窗口里用 `/` 验收。
+
+`npx skills add` 会把 Cursor skill 落到 `~/.agents/skills/`。Cursor 的 `/` 菜单有时只稳扫 `~/.cursor/skills/`，所以旧窗口输入 `/` 可能一直 loading。这是 Cursor 菜单发现路径的问题，不是 skill 装坏了。
+
+若 `/` 仍转圈，把 skill 链到 Cursor 自己的目录后再重开对话：
+
+```bash
+mkdir -p ~/.cursor/skills
+ln -sfn ~/.agents/skills/browser-code-inspector \
+  ~/.cursor/skills/browser-code-inspector
+```
+
+日常用法：在 Agent 里直接说要配置 code-inspector 即可，不必等 `/` 出现这个 skill。
 
 ## 本地使用
 
