@@ -1,0 +1,4 @@
+interface:
+  display_name: "Feature Delivery"
+  short_description: "关联产品原型、UI 设计与接口文档，适配项目并实现前端功能及联调"
+  default_prompt: "使用 $feature-delivery，按我的描述和提供的原型、UI、接口链接，在当前已有项目中实现前端功能并验证。"
